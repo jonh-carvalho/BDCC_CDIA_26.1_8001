@@ -12,11 +12,11 @@ Aula 07 - 08/04/2026 | :material-check: [Introdução ao Elastic Beanstalk](http
 Aula 08 - 16/04/2026 | :material-check: AP1 |
 Aula 09 - 23/04/2026 | :material-check: Feriado  |
 Aula 10 - 30/04/2026 | :material-check: Colunar e Orientado a Documentos(Repositórios) <br>:material-check: [RDS](https://awseducate.instructure.com/courses/1119/modules/items/19068) -  MySql |
-Aula 11 - 07/05/2026 | :material-check: Rest RDS|
-Aula 12 - 14/05/2026 | :material-check: S3 e Rest S3 |
-Aula 13 - 21/05/2026 | :material-check: |
-Aula 14 - 28/05/2026 | :material-check: |
-Aula 15 - 04/06/2026 | :material-check: |
+Aula 11 - 07/05/2026 | :material-check: Teste de Progresso|
+Aula 12 - 14/05/2026 | :material-check: RDS MySql |
+Aula 13 - 21/05/2026 | :material-check: Segurança Rest |
+Aula 14 - 28/05/2026 | :material-check: Rest RDS e Rest S3|
+Aula 15 - 04/06/2026 | :material-check: Feriado |
 Aula 16 - 11/06/2026 | :material-check: AP2 |
 Aula 17 - 18/06/2026 | :material-check: |
 Aula 18 - 25/06/2026 | :material-check: AS |
