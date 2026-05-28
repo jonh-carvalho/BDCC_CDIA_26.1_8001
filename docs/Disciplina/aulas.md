@@ -15,7 +15,7 @@ Aula 10 - 30/04/2026 | :material-check: Colunar e Orientado a Documentos(Reposit
 Aula 11 - 07/05/2026 | :material-check: Teste de Progresso|
 Aula 12 - 14/05/2026 | :material-check: RDS MySql |
 Aula 13 - 21/05/2026 | :material-check: Segurança Rest |
-Aula 14 - 28/05/2026 | :material-check: Rest RDS e Rest S3|
+Aula 14 - 28/05/2026 | :material-check: [Rest RDS e Rest S3](https://github.com/jonh-carvalho/apiawsEB)|
 Aula 15 - 04/06/2026 | :material-check: Feriado |
 Aula 16 - 11/06/2026 | :material-check: AP2 |
 Aula 17 - 18/06/2026 | :material-check: |
