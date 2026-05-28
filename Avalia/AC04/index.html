@@ -1335,6 +1335,130 @@
 
 <h1 id="avaliacao-continuada-02"><strong>Avaliação Continuada  02</strong><a class="headerlink" href="#avaliacao-continuada-02" title="Permanent link">&para;</a></h1>
 <h2 id="atividade"><strong>Atividade:</strong><a class="headerlink" href="#atividade" title="Permanent link">&para;</a></h2>
+<p>Questão 1 - Conceitos de Elastic Beanstalk</p>
+<p>Um desenvolvedor precisa implantar uma aplicação Django REST na AWS com o menor esforço de gerenciamento de infraestrutura possível. A aplicação tem previsão de crescimento de tráfego e precisa escalar automaticamente. O desenvolvedor deseja uma solução que integre automaticamente EC2, load balancer, auto-scaling e monitoramento.</p>
+<p>Considerando o cenário descrito, qual serviço AWS é mais adequado para esta implantação?</p>
+<p>a) Amazon EC2 com configuração manual de Auto Scaling Groups</p>
+<p>b) AWS Elastic Beanstalk</p>
+<p>c) Amazon Lightsail</p>
+<p>d) AWS CloudFormation</p>
+<p>e) Amazon ECS com Fargate</p>
+<p>Questão 2 - Conceitos de Elastic Beanstalk</p>
+<p>Um desenvolvedor precisa implantar uma aplicação Django REST na AWS com o menor esforço de gerenciamento de infraestrutura possível. A aplicação tem previsão de crescimento de tráfego e precisa escalar automaticamente. O desenvolvedor deseja uma solução que integre automaticamente EC2, load balancer, auto-scaling e monitoramento.</p>
+<p>Considerando o cenário descrito, qual serviço AWS é mais adequado para esta implantação?</p>
+<p>a) Amazon EC2 com configuração manual de Auto Scaling Groups</p>
+<p>b) AWS Elastic Beanstalk</p>
+<p>c) Amazon Lightsail</p>
+<p>d) AWS CloudFormation</p>
+<p>e) Amazon ECS com Fargate</p>
+<p>Questão 3 - Configuração de Variáveis de Ambiente</p>
+<p>Um arquivo settings_prod.py do Django precisa acessar as credenciais do RDS MySQL configuradas no Elastic Beanstalk. As variáveis foram definidas no console do EB como:</p>
+<ul>
+<li>
+<p>DB_HOST = meu-banco.xxxxxxxx.us-east-1.rds.amazonaws.com</p>
+</li>
+<li>
+<p>DB_NAME = django_prod</p>
+</li>
+<li>
+<p>DB_USER = admin</p>
+</li>
+<li>
+<p>DB_PASSWORD = senha_segura_123</p>
+</li>
+<li>
+<p>DB_PORT = 3306</p>
+</li>
+</ul>
+<p>Qual código no settings_prod.py recupera corretamente essas configurações?</p>
+<p>python</p>
+<h1 id="opcao-a">Opção A<a class="headerlink" href="#opcao-a" title="Permanent link">&para;</a></h1>
+<p>DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_prod',
+        'USER': 'admin',
+        'PASSWORD': 'senha_segura_123',
+        'HOST': 'meu-banco.xxxxxxxx.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+    }
+}</p>
+<p>python</p>
+<h1 id="opcao-b">Opção B<a class="headerlink" href="#opcao-b" title="Permanent link">&para;</a></h1>
+<p>import os
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('DB_NAME', 'django_prod'),
+        'USER': os.environ.get('DB_USER', 'admin'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', '3306'),
+    }
+}</p>
+<p>python</p>
+<h1 id="opcao-c">Opção C<a class="headerlink" href="#opcao-c" title="Permanent link">&para;</a></h1>
+<p>import json, boto3
+ssm = boto3.client('ssm')
+params = ssm.get_parameters(Names=['DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'DB_PORT'])</p>
+<h1 id="processamento-dos-parametros">processamento dos parâmetros...<a class="headerlink" href="#processamento-dos-parametros" title="Permanent link">&para;</a></h1>
+<p>python</p>
+<h1 id="opcao-d">Opção D<a class="headerlink" href="#opcao-d" title="Permanent link">&para;</a></h1>
+<p>DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '{{DB_NAME}}',
+        'USER': '{{DB_USER}}',
+        'PASSWORD': '{{DB_PASSWORD}}',
+        'HOST': '{{DB_HOST}}',
+        'PORT': '{{DB_PORT}}',
+    }
+}</p>
+<p>a) Opção A
+b) Opção B
+c) Opção C
+d) Opção D  </p>
+<p>Questão 4 - Configuração do S3 com django-storages</p>
+<p>Uma aplicação Django precisa armazenar arquivos de mídia no Amazon S3. O desenvolvedor instalou django-storages e boto3, e configurou as variáveis de ambiente no EB. O arquivo settings_prod.py contém as configurações do S3.</p>
+<p>Considerando que a variável AWS_STORAGE_BUCKET_NAME está configurada no EB com o valor meu-app-prod-media, qual configuração completa é necessária no settings_prod.py?</p>
+<p>python</p>
+<h1 id="opcao-a_1">Opção A<a class="headerlink" href="#opcao-a_1" title="Permanent link">&para;</a></h1>
+<p>DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_STORAGE_BUCKET_NAME = 'meu-app-prod-media'
+python</p>
+<h1 id="opcao-b_1">Opção B<a class="headerlink" href="#opcao-b_1" title="Permanent link">&para;</a></h1>
+<p>import os
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+python</p>
+<h1 id="opcao-c_1">Opção C<a class="headerlink" href="#opcao-c_1" title="Permanent link">&para;</a></h1>
+<p>import os
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME', 'us-east-1')
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+python</p>
+<h1 id="opcao-d_1">Opção D<a class="headerlink" href="#opcao-d_1" title="Permanent link">&para;</a></h1>
+<p>AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'</p>
+<p>a) Opção A
+b) Opção B
+c) Opção C
+d) Opção D</p>
+<p>Questão 5 - Armazenamento de Arquivos com S3</p>
+<p>Uma aplicação Django REST permite upload de imagens de perfil de usuários. O desenvolvedor está usando o sistema de arquivos local para armazenar essas imagens, mas percebeu que as imagens são perdidas sempre que o ambiente do Elastic Beanstalk é recriado (deploy, scaling, falha de instância).</p>
+<p>Qual é a solução definitiva para armazenar arquivos de forma persistente em uma aplicação Django no Elastic Beanstalk?</p>
+<p>a) Configurar um volume EBS adicional e montá-lo na instância EC2
+b) Utilizar Amazon S3 com django-storages para armazenar todos os arquivos de mídia
+c) Salvar as imagens no banco de dados RDS como BLOB
+d) Configurar o Elastic Beanstalk para usar instâncias com armazenamento de instância persistente
+e) Fazer backup periódico dos arquivos para um bucket S3 via cron job</p>
 
 
 
