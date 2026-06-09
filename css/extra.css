@@ -15,3 +15,18 @@ hr {
   background-color: #193257;
   margin: 2em 0;
 }
+
+.ac1-link {
+  display: inline-block;
+  background-color: #fab90a;
+  color: #193257;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.ac1-link:hover {
+  color: #fab90a;
+  background-color: #193257;
+}
