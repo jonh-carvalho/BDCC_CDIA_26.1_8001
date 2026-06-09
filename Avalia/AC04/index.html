@@ -1118,9 +1118,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="👉 Formulário de AC4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#questao-1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1130,8 +1131,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#questao-2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1141,8 +1142,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#questao-3" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1152,8 +1153,30 @@
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#questao-4" class="md-nav__link">
+    <span class="md-ellipsis">
       
-        <li class="md-nav__item">
+        Questão 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#questao-5-armazenamento-de-arquivos-com-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questão 5 - Armazenamento de Arquivos com S3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#questao-discursiva-1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1161,6 +1184,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1442,7 +1470,7 @@
 
 <h1 id="avaliacao-continuada-04"><strong>Avaliação Continuada  04</strong><a class="headerlink" href="#avaliacao-continuada-04" title="Permanent link">&para;</a></h1>
 <h2 id="formulario-de-ac4"><a class="ac1-link" target="_blank" href="https://forms.cloud.microsoft/r/uCZ6jMMiME">👉 Formulário de AC4</a><a class="headerlink" href="#formulario-de-ac4" title="Permanent link">&para;</a></h2>
-<h2 id="questao-1"><strong>Questão 1</strong><a class="headerlink" href="#questao-1" title="Permanent link">&para;</a></h2>
+<h3 id="questao-1"><strong>Questão 1</strong><a class="headerlink" href="#questao-1" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Um desenvolvedor precisa implantar uma aplicação Django REST na AWS com o menor esforço de gerenciamento de infraestrutura possível. A aplicação tem previsão de crescimento de tráfego e precisa escalar automaticamente. O desenvolvedor deseja uma solução que integre automaticamente EC2, load balancer, auto-scaling e monitoramento.</p>
 </blockquote>
@@ -1452,7 +1480,7 @@
 <p>c) Amazon Lightsail</p>
 <p>d) AWS CloudFormation</p>
 <p>e) Amazon ECS com Fargate</p>
-<h2 id="questao-2"><strong>Questão 2</strong><a class="headerlink" href="#questao-2" title="Permanent link">&para;</a></h2>
+<h3 id="questao-2"><strong>Questão 2</strong><a class="headerlink" href="#questao-2" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Uma equipe de desenvolvimento está implantando uma aplicação Django no Elastic Beanstalk e precisa manter três ambientes separados: desenvolvimento (dev), homologação (staging) e produção (prod). Cada ambiente deve ter seus próprios recursos isolados (banco de dados RDS, bucket S3 e variáveis de ambiente). A equipe não quer que alterações no ambiente de desenvolvimento afetem a produção.</p>
 </blockquote>
@@ -1463,7 +1491,7 @@
 <p>d) Usar apenas uma instância EC2 e trocar as configurações manualmente</p>
 <p>e) Implantar tudo em um único ambiente e usar branches do Git para controle</p>
 <hr />
-<h2 id="questao-3"><strong>Questão 3</strong><a class="headerlink" href="#questao-3" title="Permanent link">&para;</a></h2>
+<h3 id="questao-3"><strong>Questão 3</strong><a class="headerlink" href="#questao-3" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Após o deploy de uma aplicação Django no Elastic Beanstalk, a aplicação está retornando erro 500 (Internal Server Error), mas não há informações detalhadas no console do EB. O desenvolvedor precisa acessar os logs detalhados da aplicação para identificar a causa do erro.</p>
 </blockquote>
@@ -1474,7 +1502,7 @@
 <p>d) Acessar o CloudWatch Logs no console AWS e navegar até o grupo de logs do EB</p>
 <p>e) Todas as alternativas acima podem ser usadas para obter logs, dependendo da configuração</p>
 <hr />
-<p><strong>Questão 4</strong></p>
+<h3 id="questao-4"><strong>Questão 4</strong><a class="headerlink" href="#questao-4" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Uma aplicação Django com RDS MySQL foi implantada no Elastic Beanstalk. O desenvolvedor adicionou um novo campo a um modelo existente e precisa executar python manage.py migrate no ambiente de produção para atualizar o esquema do banco de dados.</p>
 </blockquote>
@@ -1485,8 +1513,10 @@
 <p>d) Desabilitar as migrações e atualizar o banco manualmente via console RDS</p>
 <p>e) Criar uma Lambda function que execute as migrações periodicamente</p>
 <hr />
-<p><strong>Questão 5 - Armazenamento de Arquivos com S3</strong></p>
+<h3 id="questao-5-armazenamento-de-arquivos-com-s3"><strong>Questão 5 - Armazenamento de Arquivos com S3</strong><a class="headerlink" href="#questao-5-armazenamento-de-arquivos-com-s3" title="Permanent link">&para;</a></h3>
+<blockquote>
 <p>Uma aplicação Django REST permite upload de imagens de perfil de usuários. O desenvolvedor está usando o sistema de arquivos local para armazenar essas imagens, mas percebeu que as imagens são perdidas sempre que o ambiente do Elastic Beanstalk é recriado (deploy, scaling, falha de instância).</p>
+</blockquote>
 <p>Qual é a solução definitiva para armazenar arquivos de forma persistente em uma aplicação Django no Elastic Beanstalk?</p>
 <p>a) Configurar um volume EBS adicional e montá-lo na instância EC2</p>
 <p>b) Utilizar Amazon S3 com django-storages para armazenar todos os arquivos de mídia</p>
@@ -1494,7 +1524,7 @@
 <p>d) Configurar o Elastic Beanstalk para usar instâncias com armazenamento de instância persistente</p>
 <p>e) Fazer backup periódico dos arquivos para um bucket S3 via cron job</p>
 <hr />
-<h2 id="questao-discursiva-1">Questão Discursiva 1<a class="headerlink" href="#questao-discursiva-1" title="Permanent link">&para;</a></h2>
+<h3 id="questao-discursiva-1">Questão Discursiva 1<a class="headerlink" href="#questao-discursiva-1" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>Uma startup de e-commerce está desenvolvendo uma aplicação Django REST para gerenciar seu catálogo de produtos e processar pedidos. A equipe precisa implantar a aplicação em produção na AWS com os seguintes requisitos:</p>
 </blockquote>
